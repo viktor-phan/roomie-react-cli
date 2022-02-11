@@ -1,0 +1,49 @@
+.NavBar {
+  height: 3rem;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+}
+.NavBar__brandname {
+  font-size: 1.5rem;
+  width: 10rem;
+  padding: auto;
+  text-align: center;
+  align-content: center;
+}
+
+.NavBar__searchBar {
+  width: 50%;
+  height: 100%;
+}
+.NavBar__searchBar form {
+  display: flex;
+  height: 100%;
+  margin-left: 2rem;
+}
+.NavBar__searchBar form input {
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 50%;
+}
+.NavBar__searchBar form a{
+  height: 2rem;
+  width: 2rem;
+  padding: auto;
+  background-color: gray;
+}
+
+.NavBar__login {
+  width: 10rem;
+  text-align: center;
+}
+
+.NavBar__login a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
