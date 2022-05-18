@@ -1,12 +1,12 @@
-import React from 'react'
+import faker from "@faker-js/faker";
+import React from "react";
 
 export const RightBar = () => {
   return (
-    <div className="w-52 float-right">
-        <img src="https://gic.x8gdkt99.com/img/static/game/en-US/AE_GAMING/aws_62.png" alt="" />
-        <img src="https://gic.x8gdkt99.com/img/static/game/en-US/AE_GAMING/aws_62.png" alt="" />
-        <img src="https://gic.x8gdkt99.com/img/static/game/en-US/AE_GAMING/aws_62.png" alt="" />
-        <img src="https://gic.x8gdkt99.com/img/static/game/en-US/AE_GAMING/aws_62.png" alt="" />
+    <div className="w-52 float-right flex flex-col justify-start">
+      <img className="w-48 h-fit rounded-md m-2" src={faker.image.nightlife(300, 300, true)} alt="" />
+      <img className="w-48 h-fit rounded-md m-2" src={faker.image.nightlife(300, 300, true)} alt="" />
+      <img className="w-48 h-fit rounded-md m-2" src={faker.image.nightlife(300, 300, true)} alt="" />
     </div>
-  )
-}
+  );
+};
