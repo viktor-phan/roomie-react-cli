@@ -1,8 +1,6 @@
-import React from "react";
-
 export const LeftBar = () => {
   return (
-    <div className="w-52 h-screen p-2 float-left text-left">
+    <div className="w-56 h-screen p-2 float-left text-left fixed sticky top-0 bg-slate-700 text-white">
       <form className="p-4 flex flex-col justify-evenly">
         <h2>Price</h2>
         <input type="range" min="1" max="100" value="50" id="myRange" />
