@@ -1,8 +1,6 @@
-import React from "react";
 import faker from "@faker-js/faker";
 import "./houseCard.css";
 export const HouseCard = ({ house }: any) => {
-  console.log(house);
   return (
     <div className="w-80 h-fit container flex flex-col m-2 p-2 bg-slate-100 items-center">
       <img

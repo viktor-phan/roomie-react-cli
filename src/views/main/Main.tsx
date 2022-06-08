@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
+
 import HouseList from "../../components/HouseList";
 import RightBar from "../../components/RightBar";
 import LeftBar from "../../components/LeftBar";
-import axios, { AxiosResponse } from "axios";
 
-const BASE_URL = "http://localhost:5000/api/v1/house";
+const BASE_URL = "api/v1/house";
 export const Main = () => {
   const [houses, setHouses] = useState<AxiosResponse | null | any>();
 
