@@ -1,10 +1,11 @@
 import faker from "@faker-js/faker";
 import "./houseCard.css";
+
 export const HouseCard = ({ house }: any) => {
   return (
-    <div className="w-80 h-fit container flex flex-col m-2 p-2 bg-slate-100 items-center">
+    <div className="houseCard w-80 h-[22rem] container flex flex-col m-2 p-2 bg-slate-100 items-center rounded-lg">
       <img
-        className="w-72"
+        className="w-72 rounded-lg"
         // src="https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero-852x479.jpg"
         src={faker.image.city(600, 400, true)}
         alt="image"
@@ -18,7 +19,7 @@ export const HouseCard = ({ house }: any) => {
         <p>{house.zip}</p>
       </div>
       <div className="w-72 h-10 bg-indigo-500 hover:bg-indigo-400 text-white flex justify-center items-center hover:cursor-pointer">
-        Check availability
+        Check
       </div>
     </div>
   );

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 
 import HouseList from "../../components/HouseList";
-import RightBar from "../../components/RightBar";
-import LeftBar from "../../components/LeftBar";
+import SearchJumbotron from "../../components/SearchJumbotron";
+import FeatureList from "../../components/FeaturesList";
 
 const BASE_URL = "api/v1/house";
 export const Main = () => {
@@ -12,25 +12,21 @@ export const Main = () => {
   useEffect(() => {
     const getHouses = async () => {
       const res = await axios.get(BASE_URL);
-      setHouses(res.data);
+      setHouses(res.data.splice(0, 10));
     };
     getHouses();
   }, []);
 
-  if (houses == undefined) {
-    return (
-      <div className="flex flex-row justify-between">
-        <LeftBar />
-        <h1>Loading...</h1>
-        <RightBar />
-      </div>
-    );
-  }
   return (
-    <div className="flex flex-row justify-between">
-      <LeftBar />
-      <HouseList houses={houses} />
-      <RightBar />
+    <div className="flex flex-col w-full justify-center items-center">
+      <SearchJumbotron />
+      {houses == undefined ? (
+        <h1>Loading...</h1>
+      ) : (
+        <HouseList houses={houses} />
+      )}
+      {/* // Add loading screen later */}
+      <FeatureList />
     </div>
   );
 };
